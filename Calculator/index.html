@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<script>
+    function donalt(val)
+{
+    var n1=document.getElementById('res');
+    n1.value=n1.value+val;
+}    
+function result(){
+    var num1 = document.getElementById('res').value;
+    var num2=eval(num1);
+    document.getElementById('res').value=num2;
+}
+function cl(val)
+{
+   document.getElementById('res').value=null;
+}
+</script>
+<style>
+    table{
+        padding-top: 7px;
+        border: 3px solid black;
+        margin-left: auto;
+        margin-right: auto;
+          background-color:teal;
+    }
+    
+    form{
+        padding-top: 30px;
+    }
+    input[type="button"]{
+        width: 53%;
+       padding: 28px 45px;
+        background-color: blueviolet;
+        color: black;
+        font-weight: bold;
+        font-size: 19px;
+        margin-left: 3px;
+
+    }
+    input[type="text"]{
+        padding: 26px 30px;
+        font-size: 24px;
+        font-weight: bold;
+        width: 75%;
+        margin-left: 15px;
+        margin-right: 4px;
+        border: 3px solid black;
+        padding-bottom: 7px;
+    }
+</style>
+<body>
+   <form>
+    <table>
+        <tr>
+            <td colspan="4">
+                <input type="text" id="res">
+            
+            </td>
+        </tr>
+        <tr>
+            <td><input type="button" value="" onclick="donalt('')"></td>
+            <td><input type="button" value="-" onclick="donalt('-')"></td>
+            <td><input type="button"  onclick="result()" value="="></td>
+            <td><input type="button" value="C" onclick="cl()"></td> 
+
+        </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="donalt('7')"></td>
+            <td><input type="button" value="8" onclick="donalt('8')"></td>
+            <td><input type="button" value="9" onclick="donalt('9')"></td>
+            <td><input type="button" onclick="donalt('+')" value="+"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="donalt('4')"></td>
+            <td><input type="button" value="5" onclick="donalt('5')"></td>
+            <td><input type="button" value="6" onclick="donalt('6')"></td>
+            <td><input type="button" value="/" onclick="donalt('/')"></td>
+
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="donalt('1')"></td>
+            <td><input type="button" value="2" onclick="donalt('2')"></td>
+            <td><input type="button" value="3" onclick="donalt('3')"></td>
+            <td><input type="button" value="0" onclick="donalt('0')"></td>
+
+        </tr>
+    </table>
+   </form>
+    
+</body>
+</html>
